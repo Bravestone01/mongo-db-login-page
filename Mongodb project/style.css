@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f5f5f5;
+}
+
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.diva{
+    width: 30%;
+    height: auto;
+    background-color: rgb(253, 253, 253);
+}
+
+.divb{
+    background-color: aqua;
+    width: 70%;
+    height: auto;
+}
+
+.logo{
+    width: 237px;
+    height: 110px;
+    margin-top: 15px;
+    margin-left: 29px;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+h2{
+    margin-left: 28px;
+    margin-top: 15px;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h3{
+    margin-left: 28px;
+    margin-top: 20px;
+
+}
+h3 a{
+    text-decoration: none;
+}
+
+.log-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.log-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 88px;
+    border: 1px solid #dadce0;
+    border-radius: 5px;
+    background-color: rgba(206, 204, 204, 0.783);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #5f6368;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    width: 260px;
+    margin-left: 28px;
+    margin-top: 8px;
+}
+
+.log-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.google-btn {
+    color: #000203;
+}
+
+.git-btn {
+    color: #24292f;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin: 17px 26px;
+}
+
+.separator .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #dadce0;
+}
+
+.separator .text {
+    margin: 0 10px;
+    color: #5f6368;
+    font-size: 14px;
+}
+
+.email-login {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+}
+
+.email-login label {
+    font-size: 16px;
+    color: #5f6368;
+    margin-bottom: 5px;
+    margin-left: 25px;
+}
+
+.email-login input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #dadce0;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: border-color 0.2s;
+    margin-left: 20px;
+}
+
+.email-login input:focus {
+    border-color: #021227;
+}
+
+.next-button, .login-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    color: #5f6368;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.next-button {
+    margin-bottom: 20px;
+}
+
+.next-button:hover {
+    background-color: green;
+    color: #000203;
+}
+
+.hidden {
+    display: none;
+}
+.login-button:hover {
+    background-color: green;
+    color: #000203;
+}
+
+.divb img{
+    width: 100%;
+    height: 100%;
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .diva, .divb {
+        width: 100%;
+    }
+
+    .diva {
+        order: 2;
+    }
+
+    .divb {
+        order: 1;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .log-btn {
+        padding: 10px 20px;
+        width: auto;
+    }
+
+    .separator .text {
+        font-size: 12px;
+    }
+
+    .email-login {
+        width: 90%;
+    }
+
+    .next-button, .login-button {
+        width: 100%;
+        padding: 10px;
+    }
+}

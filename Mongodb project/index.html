@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongo db Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container">
+        <div class="diva">
+            <div class="logo">
+                <img src="logo.png" alt="mongodb" />
+              </div>
+              <h2>Log in to your account</h2>
+      <h3>Don't have an account? <a href="#"> Sign up</a></h3>
+      <div class="log-btns">
+        <button class="log-btn google-btn">
+          <img src="google.png" alt="Google Logo" class="login-logo" />
+          Google
+        </button>
+        <button class="log-btn git-btn">
+          <img src="github.png" alt="GitHub Logo" class="login-logo" />
+          GitHub
+        </button>
+      </div>
+      <div class="separator">
+        <div class="line"></div>
+        <div class="text">Or with email and password</div>
+        <div class="line"></div>
+      </div>
+      <div class="email-login">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email"  required />
+        <button
+          id="next-button"
+          class="next-button"
+          onclick="showPasswordField()"
+        >
+          Next
+        </button>
+      </div>
+
+        </div>
+        <div class="divb">
+            <img src="ss.png" alt="">
+        </div>
+    </div>
+</body>
+<script>function showPasswordField() {
+  
+    const passwordLabel = document.createElement('label');
+    passwordLabel.setAttribute('for', 'password');
+    passwordLabel.textContent = 'Password';
+
+    const passwordInput = document.createElement('input');
+    passwordInput.setAttribute('type', 'password');
+    passwordInput.setAttribute('id', 'password');
+    passwordInput.setAttribute('name', 'password');
+
+   
+    const loginButton = document.createElement('button');
+    loginButton.setAttribute('id', 'login-button');
+    loginButton.classList.add('login-button');
+    loginButton.textContent = 'Login';
+    loginButton.onclick = login;  
+
+    const emailLoginDiv = document.querySelector('.email-login');
+
+    emailLoginDiv.appendChild(passwordLabel);
+    emailLoginDiv.appendChild(passwordInput);
+    emailLoginDiv.appendChild(loginButton);
+
+    const nextButton = document.getElementById('next-button');
+    nextButton.classList.add('hidden');
+}
+
+function login() {
+    alert('Logging in...');
+}
+</script>
+</html>
